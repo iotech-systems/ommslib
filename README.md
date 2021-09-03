@@ -1,0 +1,2 @@
+# sbmslib
+shared lib
