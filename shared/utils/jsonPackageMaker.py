@@ -20,10 +20,10 @@ class jsonPackageMaker(object):
       self.busType = "modbus"
 
    def make(self, streamName: str, streamTable: str, meterBrand: str
-         , meterModel: str, modbusAddress: int, readings: List[dict]):
-      # - - - -
+         , meterModel: str, modbusAddress: int, readTime: float, readings: List[dict]):
+      # - - - - - - - - - - - -
       return {"streamName": streamName, "streamTable": streamTable
-         , "meterBrand": meterBrand, "meterModel": meterModel
-         , "edgeName": self.edgeName, "busType": self.busType
-         , "busAddress": modbusAddress, "dtsUtc": self.dtsUtc.strftime(dtsFormats.std)
-         , "readings": readings}
+         , "meterBrand": meterBrand, "meterModel": meterModel, "readTime": readTime 
+         , "edgeName": self.edgeName, "busType": self.busType, "busAddress": modbusAddress
+         , "dtsUtc": self.dtsUtc.strftime(dtsFormats.std), "readings": readings}
+
