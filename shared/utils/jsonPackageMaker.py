@@ -23,7 +23,7 @@ class jsonPackageMaker(object):
          , meterModel: str, modbusAddress: int, readTime: float, readings: List[dict]):
       # - - - - - - - - - - - -
       return {"streamName": streamName, "streamTable": streamTable
-         , "meterBrand": meterBrand, "meterModel": meterModel, "readTime": readTime 
+         , "meterBrand": meterBrand, "meterModel": meterModel, "readTimeSecs": readTime 
          , "edgeName": self.edgeName, "busType": self.busType, "busAddress": modbusAddress
          , "dtsUtc": self.dtsUtc.strftime(dtsFormats.std), "readings": readings}
 
