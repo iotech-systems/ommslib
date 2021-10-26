@@ -1,5 +1,5 @@
 
-from sbmslib.shared.models import coreModel
+from openbmslib.shared.models import coreModel
 
 
 class alarmReport(coreModel.coreModel):

@@ -6,7 +6,7 @@ import minimalmodbus as mm
 import xml.etree.ElementTree as et
 import serial
 import serial.tools.list_ports as sysPorts
-from sbmslib.shared.utils import sysutils
+from openbmslib.shared.utils import sysutils
 
 
 class ttyUSBDeviceScanner(object):

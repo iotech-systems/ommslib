@@ -1,7 +1,7 @@
 
 import os
 from typing import List
-from sbmslib.shared.models.kWhReading import kWhReading
+from openbmslib.shared.models.kWhReading import kWhReading
 import xml.etree.ElementTree as et
 
 

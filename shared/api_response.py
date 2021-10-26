@@ -1,6 +1,6 @@
 
 import json
-from sbmslib.shared.app_error_codes import appErrorCodes
+from openbmslib.shared.app_error_codes import appErrorCodes
 
 
 class api_response(object):
