@@ -1,7 +1,7 @@
 
 import json
 import datetime as dt
-from sbmslib.shared.utils.jsonx import jsonx
+from openbmslib.shared.utils.jsonx import jsonx
 
 
 DATE_FORMAT = "%Y-%m-%d %H:%M:%S UTC"

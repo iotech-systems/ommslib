@@ -1,6 +1,6 @@
 
 from typing import List
-from sbmslib.shared.models.kWhReading import kWhReading
+from openbmslib.shared.models.kWhReading import kWhReading
 
 
 class sysutils(object):
