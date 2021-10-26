@@ -1,12 +1,12 @@
 
-from openbmslib.shared.models import coreModel
+from sbmslib.shared.models import coreModel
 
 
 class alarmReport(coreModel.coreModel):
 
-   def __init__(self):
+   def __init__(self, meterDBID=0):
       super(alarmReport, self).__init__()
-      self.meterDBID: int = 0
+      self.meterDBID: int = meterDBID
       self.level: str = ""
       self.alarm_tag: str = ""
       self.alarm_msg: str = ""

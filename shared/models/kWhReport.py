@@ -1,5 +1,5 @@
 
-from openbmslib.shared.models import coreModel
+from sbmslib.shared.models import coreModel
 
 
 class kWhReport(coreModel.coreModel):
