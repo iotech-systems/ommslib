@@ -1,2 +1,2 @@
-# sbmslib
+# openbmslib
 shared lib
