@@ -9,7 +9,7 @@ package = {"streamName": streamName, "streamTable": streamTable
 from typing import List
 from datetime import datetime
 from core.sys import dtsFormats
-from openbmslib.shared.utils.sysutils import sysutils
+from ommslib.shared.utils.sysutils import sysutils
 
 
 class jsonPackageMaker(object):
