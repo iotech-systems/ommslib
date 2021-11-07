@@ -2,4 +2,4 @@
 
 cd ../
 pwd
-ln -s ../cli cli
+ln -s ommslib/cli cli
