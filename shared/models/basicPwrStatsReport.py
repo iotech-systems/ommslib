@@ -24,7 +24,7 @@ CREATE TABLE streams.basic_pwr_stats (
 );
 """
 
-from openbmslib.shared.models import coreModel
+from ommslib.shared.models import coreModel
 
 
 class basicPwrStatsReport(coreModel.coreModel):
