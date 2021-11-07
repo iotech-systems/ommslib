@@ -1,3 +1,3 @@
-# ommslib 
+# ommslib & cli
 
 shared lib
