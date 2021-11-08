@@ -42,8 +42,8 @@ def main():
       except:
          print(" - no response!")
    # - - - -
-   print("\n\tScan complete!")
-   print(f"\t - scan address space: {start} to {end}")
+   print("\n\tScan Complete!")
+   print(f"\t - modbus address space: {start} to {end}")
    print(f"\t - found: {counter}\n")
 
 
