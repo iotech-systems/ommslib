@@ -43,8 +43,8 @@ def main():
          print(" - no response!")
    # - - - -
    print("\n\tScan complete!")
-   print(f"scan address space: {start} to {end}")
-   print(f"found: {counter}\n")
+   print(f"\t - scan address space: {start} to {end}")
+   print(f"\t - found: {counter}\n")
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
