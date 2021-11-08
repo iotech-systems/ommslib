@@ -27,18 +27,24 @@ inst.debug = False
 
 def main():
    print("\n starting scan for ports: %s to %s\n" % tuple(adrange))
+   counter: int = 0
    start, end = [int(x) for x in adrange]
+   # - - - -
    for i in range(start, end):
       try:
-         time.sleep(0.64)
+         time.sleep(0.48)
          print(f"\tscanning modbus address: {i} -> ", end="")
          inst.address = i
          val = inst.read_register(2)
+         if val == i:
+            counter += 1
          print(f" + response: {val}")
       except:
          print(" - no response!")
-   # ----
-   print("\n\tScan complete!\n")
+   # - - - -
+   print("\n\tScan complete!")
+   print(f"scan address space: {start} to {end}")
+   print(f"found: {counter}\n")
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
