@@ -43,7 +43,8 @@ def main():
          print(" - no response!")
    # - - - -
    print("\n\tScan Complete!")
-   print(f"\t - modbus address space: {start} to {end}")
+   print(f"\t - ttyDev: {ttydev}")
+   print(f"\t - modbus address space: {start} ~ {end}")
    print(f"\t - found: {counter}\n")
 
 
