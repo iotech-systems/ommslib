@@ -1,0 +1,140 @@
+#!/usr/bin/env python3
+
+import os, sys
+import hashlib
+
+USERS = []
+USERSFILE = "/var/www/html/app/users"
+CMDS = {"--adduser": 3,
+   "--deluser": 1,
+   "--setpwd": 2,
+   "--listusers": 0}
+
+info = """
+   help:
+      --adduser uid pwd acl
+         uid : [a-zA-Z0-9\.]{8,16}
+         pwd : [a-zA-Z0-9!@#$%]{8,16}
+         acl : [15|4|2|1|0] ~ 15 -> admin;
+      --deluser uid
+         uid: existing user
+      --setpwd uid pwd
+         uid: existing user
+         pwd: new password 
+"""
+
+
+def adduser(uid, pwd, acl):
+   print("-- adduser --")
+   if __user_exists__(uid):
+      print(f"UserExists: {uid}")
+      exit(0)
+   # -- else --
+   pwd: str = pwd.strip()
+   md5 = hashlib.md5(pwd.encode("utf-8"))
+   md5hash = md5.hexdigest()
+   USERS.append(f"{uid};{md5hash};{acl};")
+   __save_users__()
+   print("-- user added --")
+
+
+def deluser(uid):
+   print("-- deluser --")
+   uid = sys.argv[2:][0]
+   for u in USERS:
+      if u.startswith(f"{uid};"):
+         USERS.remove(u)
+         __save_users__()
+
+
+def setpwd(uid: str, pwd: str):
+   print("-- setpwd --")
+   pwd = pwd.strip()
+   # -- get user --
+   uln: str = __find_user__(uid)
+   if uln is not None:
+      if uln.endswith(";"):
+         uln = uln.strip(";")
+      tuid, tpwd, tacl = uln.split(";")
+      deluser(uid)
+      adduser(tuid, pwd, tacl)
+
+
+def listusers():
+   print("-- users --")
+   for u in USERS:
+      if not u.startswith("#"):
+         print(u)
+
+
+def main():
+   # -- load users --
+   __load_users__()
+   # -- only script name --
+   if len(sys.argv) == 1:
+      print(info)
+      exit(0)
+   else:
+      cmd = sys.argv[1]
+      if cmd not in CMDS.keys():
+         print(f"\n -- BadCMD: {cmd}")
+         print(info)
+         exit(0)
+      # -- run cmd --
+      count = len(sys.argv)
+      if (cmd == "--adduser") and ((CMDS[cmd] + 2) == count):
+         uid, pwd, acl = sys.argv[2:]
+         adduser(uid, pwd, acl)
+      elif (cmd == "--deluser") and ((CMDS[cmd] + 2) == count):
+         uid = sys.argv[2:][0]
+         deluser(uid)
+      elif (cmd == "--setpwd") and ((CMDS[cmd] + 2) == count):
+         uid, pwd = sys.argv[2:]
+         setpwd(uid, pwd)
+      elif (cmd == "--listusers") and ((CMDS[cmd] + 2) == count):
+         listusers()
+      else:
+         print(f"\n -- BadCall --")
+         print(info)
+         exit(0)
+
+
+def __save_users__():
+   with open(USERSFILE, "w") as f:
+      for u in USERS:
+         if u not in ["", None]:
+            f.write(f"{u}\n")
+
+
+def __user_exists__(uid):
+   for u in USERS:
+      if u.startswith(f"{uid};"):
+         return True
+   return False
+
+
+def __find_user__(uid) -> [None, str]:
+   for u in USERS:
+      if u.startswith(f"{uid};"):
+         return u
+   return None
+
+
+"""
+   this file should be:
+      /var/www/html/app/users
+"""
+def __load_users__():
+   if not os.path.exists(USERSFILE):
+      print(" -- users file not found --")
+      exit(1)
+   # -- load file --
+   global USERS
+   with open(USERSFILE, "r") as u:
+      for ln in u.readlines():
+         USERS.append(ln.strip())
+
+
+# -- entry point --
+if __name__ == "__main__":
+   main()
