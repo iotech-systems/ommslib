@@ -21,6 +21,7 @@ info = """
       --setpwd uid pwd
          uid: existing user
          pwd: new password 
+      --listusers
 """
 
 
