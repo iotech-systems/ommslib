@@ -1,3 +1,4 @@
-# ommslib & cli
+![OpenMMS Logo](https://iotech.systems/imgs/omms-logo-1200px.png)
 
-shared lib
+# ommslib module
+
