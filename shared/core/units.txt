@@ -1,0 +1,11 @@
+
+unit magnitude:
+   h|H = 100 - hector
+   k|K = 1000 - kilo
+   m|M = 1000000 - mega
+
+current:
+   a -> amps
+
+voltage:
+   v -> volts

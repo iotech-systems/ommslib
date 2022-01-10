@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<regtypes>
+
+    <!-- voltage -->
+    <regtype id="LineVolts" unit="V" label="volts" />
+    <regtype id="L1_Volts" unit="V" label="volts" />
+    <regtype id="L2_Volts" unit="V" label="volts" />
+    <regtype id="L3_Volts" unit="V" label="volts" />
+
+    <!-- amps -->
+    <regtype id="TotalAmps" unit="A" label="volt|s" />
+    <regtype id="L1_Amps" unit="A" label="volt|s" />
+    <regtype id="L2_Amps" unit="A" label="volt|s" />
+    <regtype id="L3_Amps" unit="A" label="volt|s" />
+
+    <!-- frequency -->
+    <regtype id="LineFreq" unit="HZ" label="hertz" />
+    <regtype id="L1_Freq" unit="HZ" label="hertz" />
+    <regtype id="L2_Freq" unit="HZ" label="hertz" />
+    <regtype id="L3_Freq" unit="HZ" label="hertz" />
+
+    <!-- active power or real power
+        Active power is the power which is actually consumed or utilized in an AC Circuit is
+        called True power or Active Power or real power. It is measured in kilowatt (kW) or MW.
+        It is the actual outcomes of the electrical system which runs the electric circuits or load.
+    -->
+    <regtype id="TotalActivePower" unit="K|W" label="Kilo|Watt|s" />
+    <regtype id="L1_ActivePower" unit="K|W" label="Kilo|Watt|s" />
+    <regtype id="L2_ActivePower" unit="K|W" label="Kilo|Watt|s" />
+    <regtype id="L3_ActivePower" unit="K|W" label="Kilo|Watt|s" />
+
+    <!-- APPARENT POWER (KVA): Kilo Volt Ampere is the measure of apparent power in ac circuit.
+        It used to rate how much power the supply can deliver. KVA is usually used to rate sources
+        such as transformers, generators, UPS etc. It is also called imaginary power. The actual power(KW)
+        consumed by the loads connected in a circuit can be obtained by multiplying apparent
+        power(KVA) with power factor. It can be expressed in complex form as:
+            apparent power(KVA) = active power(KW) + reactive power
+    -->
+    <regtype id="TotalApparentPower" unit="K|VA" label="Kilo|VoltAmpere" />
+    <regtype id="L1_ApparentPower" unit="K|VA" label="Kilo|VoltAmpere" />
+    <regtype id="L2_ApparentPower" unit="K|VA" label="Kilo|VoltAmpere" />
+    <regtype id="L3_ApparentPower" unit="K|VA" label="Kilo|VoltAmpere" />
+
+    <!-- REACTIVE POWER(KVAr): Reactive power is the imaginary part of apparent power when it is
+        expressed in complex form. If the load in an ac circuit is only resistive the power will always
+        flow from source to load. If reactive loads (inductor or capacitor) connected in ac circuit it causes
+        reactive power to develop in the circuit. The reactive power is continually bounces back and forth
+        between the source & load. It represents the energy that is first stored and then released in the magnetic
+        field of the inductor, or in the electric field of a capacitor connected in the circuit. Since
+        reactive power bounces back and forth between source and load it does not provide any energy to
+        the load and draws more current from mains so more heat loss take place on the circuit lines. The
+        reactive power can be reduced by increasing the power factor (reducing the phase angle). This can be
+        achieved by providing a designed capacitive bank in the circuit.
+    -->
+   <regtype id="TotalReactivePower" unit="KVAr" label="KiloVoltAmpereReactive" />
+   <regtype id="L1_ReactivePower" unit="KVAr" label="KiloVoltAmpereReactive" />
+   <regtype id="L2_ReactivePower" unit="KVAr" label="KiloVoltAmpereReactive" />
+   <regtype id="L3_ReactivePower" unit="KVAr" label="KiloVoltAmpereReactive" />
+
+   <!-- meter power factor of the meter -->
+   <regtype id="TotalPowerFactor" unit="unitless" label="TotalPowerFactor" />
+   <regtype id="L1_PowerFactor" unit="unitless" label="L1_PowerFactor" />
+   <regtype id="L2_PowerFactor" unit="unitless" label="L2_PowerFactor" />
+   <regtype id="L3_PowerFactor" unit="unitless" label="L3_PowerFactor" />
+
+    # misc
+   CRC = "CRC"
+   CombinedCode = "CombinedCode"
+   # kwh ~ kWh
+   TotalActiveEnergy = "TotalActiveEnergy"                  # used by 1phase and 3phase meters
+   L1_TotalActiveEnergy = "L1_TotalActiveEnergy"
+   L2_TotalActiveEnergy = "L2_TotalActiveEnergy"
+   L3_TotalActiveEnergy = "L3_TotalActiveEnergy"
+
+
+    # - - - -
+   TotalReactiveEnergy = "TotalReactiveEnergy"              # used by 1phase and 3phase meters
+   L1_ReactiveEnergy = "L1_ReactiveEnergy"
+   L2_ReactiveEnergy = "L2_ReactiveEnergy"
+   L3_ReactiveEnergy = "L3_ReactiveEnergy"
+   # forward active energy
+   ForwardActiveEnergy = "ForwardActiveEnergy"
+   L1_ForwardActiveEnergy = "L1_ForwardActiveEnergy"
+   L2_ForwardActiveEnergy = "L2_ForwardActiveEnergy"
+   L3_ForwardActiveEnergy = "L3_ForwardActiveEnergy"
+
+
+    <!-- misc -->
+     HardwareVersion = "HardwareVersion"
+   SoftwareVersion = "SoftwareVersion"
+   CT_Rate = "CT_Rate"
+   S0_OutputRate = "S0_OutputRate"
+   A3 = "A3"
+   CycleTime = "CycleTime"
+
+</regtypes>
