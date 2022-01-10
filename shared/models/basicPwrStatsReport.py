@@ -58,11 +58,23 @@ class basicPwrStatsReport(coreModel.coreModel):
    def setMeterDBID(self, meterDBID: int):
       self.meterDBID = meterDBID
 
-   def set(self, grid_freq_hz: float = 0.0, line_volts: float = 0.0, l1_volts: float = 0.0
-           , l2_volts: float = 0.0, l3_volts: float = 0.0, total_amps: float = 0.0, l1_amps: float = 0.0
-           , l2_amps: float = 0.0, l3_amps: float = 0.0, total_active_pwr: float = 0.0, l1_active_pwr: float = 0.0
-           , l2_active_pwr: float = 0.0, l3_active_pwr: float = 0.0, total_reactive_pwr: float = 0.0
-           , l1_reactive_pwr: float = 0.0, l2_reactive_pwr: float = 0.0, l3_reactive_pwr: float = 0.0):
+   def set(self, grid_freq_hz: float = 0.0
+           , line_volts: float = 0.0
+           , l1_volts: float = 0.0
+           , l2_volts: float = 0.0
+           , l3_volts: float = 0.0
+           , total_amps: float = 0.0
+           , l1_amps: float = 0.0
+           , l2_amps: float = 0.0
+           , l3_amps: float = 0.0
+           , total_active_pwr: float = 0.0
+           , l1_active_pwr: float = 0.0
+           , l2_active_pwr: float = 0.0
+           , l3_active_pwr: float = 0.0
+           , total_reactive_pwr: float = 0.0
+           , l1_reactive_pwr: float = 0.0
+           , l2_reactive_pwr: float = 0.0
+           , l3_reactive_pwr: float = 0.0):
       # - - - - - -
       self.grid_freq_hz = grid_freq_hz
       self.line_volts = line_volts
