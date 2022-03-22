@@ -18,7 +18,9 @@ adrange = sys.argv[2].strip().split("~")
 brate = int(sys.argv[3])
 tmp = sys.argv[4].upper()
 if not tmp.isalpha() and tmp not in ["E", "N", "O"]:
-   raise f"BadParityInput: {tmp}"
+   print(f"n\tBadParityInput: {tmp}\n")
+   sys.exit(1)
+# -- run --
 parity = sys.argv[4].upper()
 timeout = float(sys.argv[5])
 reg = int(sys.argv[6])

@@ -25,3 +25,15 @@ class sysutils(object):
          raise Exception(f"FileNotFound: {meterXmlFile}")
       # -- return --
       return et.ElementTree().parse(meterXmlFile)
+
+   @staticmethod
+   def ttyusb(ap: argsParser):
+      ttydev = ap.get_item("port")
+      path = ap.get_item("path")
+      if ttydev == "":
+         finder: ttyUSBFinder = ttyUSBFinder()
+         ttydev = finder.find_by_path(path)
+      if ttydev in [None, False]:
+         raise SystemError(f"CanNotLocateUSBDevice:[ {ttydev} : {path} ]")
+      print(f"\tusing ttydev:[ {ttydev} : {path} ]")
+      return ttydev
