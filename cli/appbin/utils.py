@@ -10,6 +10,7 @@ def get_omms_meter_info() -> [None, tuple]:
    if not os.path.exists(path):
       print(f"meter path not found: {path}")
       return None
+   print(f"\npath: {path}\n")
    # -- load meter xml --
    xml = et.parse(path)
    xml_root = xml.getroot()
