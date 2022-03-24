@@ -26,6 +26,7 @@ class sysutils(object):
       # -- return --
       return et.ElementTree().parse(meterXmlFile)
 
+   """
    @staticmethod
    def ttyusb(ap: argsParser):
       ttydev = ap.get_item("port")
@@ -37,3 +38,4 @@ class sysutils(object):
          raise SystemError(f"CanNotLocateUSBDevice:[ {ttydev} : {path} ]")
       print(f"\tusing ttydev:[ {ttydev} : {path} ]")
       return ttydev
+   """

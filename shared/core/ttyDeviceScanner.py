@@ -12,6 +12,7 @@ from ommslib.shared.utils import sysutils
 class ttyUSBDeviceScanner(object):
 
    AUTO = "AUTO"
+   DEV_SERIAL_BY_PATH = "DEV_SERIAL_BY_PATH"
 
    def __init__(self, ttyDev: str = AUTO):
       self.ttyDev = ttyDev
