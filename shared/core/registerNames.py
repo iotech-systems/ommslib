@@ -3,7 +3,6 @@
 class registerNames(object):
 
    # single phase names & total reads for 3 phase meters
-   GridFreqHz = "GridFreqHz"
    ModbusAddress = "ModbusAddress"
    SerialNumber = "SerialNumber"
    # ReactiveEnergy = "ReactiveEnergy"
@@ -14,6 +13,11 @@ class registerNames(object):
    S0_OutputRate = "S0_OutputRate"
    A3 = "A3"
    CycleTime = "CycleTime"
+   # line(s) frequency ~ Hz
+   GridFreqHz = "GridFreqHz"
+   L1_FreqHz = "L1_FreqHz"
+   L2_FreqHz = "L2_FreqHz"
+   L3_FreqHz = "L3_FreqHz"
    # voltage ~ V
    LineVoltage = "LineVoltage"                              # used by 1phase and 3phase meters
    L1_Voltage = "L1_Voltage"

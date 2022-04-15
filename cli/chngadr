@@ -9,6 +9,11 @@ OMMS_DEFAULT_ROOT = "/opt/iotech/omms"
 OMMS_ROOT = os.getenv("OMMS_ROOT")
 if (OMMS_ROOT is None) and os.path.exists(OMMS_DEFAULT_ROOT):
    OMMS_ROOT = OMMS_DEFAULT_ROOT
+else:
+   print(f"-- NOT_FOUND_OMMS_ROOT: [{OMMS_DEFAULT_ROOT}] --")
+   print(" run > export OMMS_ROOT")
+   exit(1)
+
 # -- set meter info --
 OMMS_METER = os.getenv("OMMS_METER")
 BDR, PAR, BITS, TOUT, ADR = uts.get_omms_meter_info()
