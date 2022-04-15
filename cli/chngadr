@@ -7,10 +7,11 @@ import appbin.utils as uts
 
 OMMS_DEFAULT_ROOT = "/opt/iotech/omms"
 OMMS_ROOT = os.getenv("OMMS_ROOT")
-if (OMMS_ROOT is None) and os.path.exists(OMMS_DEFAULT_ROOT):
+if OMMS_ROOT is None:
    OMMS_ROOT = OMMS_DEFAULT_ROOT
-else:
-   print(f"-- NOT_FOUND_OMMS_ROOT: [{OMMS_DEFAULT_ROOT}] --")
+# check roo path
+if not os.path.exists(OMMS_ROOT):
+   print(f"-- OMMS_ROOT_NOT_FOUND: [ {OMMS_ROOT} ] --")
    print(" run > export OMMS_ROOT")
    exit(1)
 
