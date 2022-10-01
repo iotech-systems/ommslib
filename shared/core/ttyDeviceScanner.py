@@ -1,5 +1,4 @@
 
-import os
 import time
 import typing as t
 import minimalmodbus as mm
@@ -18,6 +17,7 @@ class ttyUSBDeviceScanner(object):
       self.ttyDev = ttyDev
       self.meters: t.List[et.Element] = []
       self.usbSerPorts: [] = None
+      # -- get all systems ser ports --
       self.__load_usb_ser_ports__()
 
    def locateMetersUSBSerialPort(self, lst: t.List[et.Element]) -> [serial.Serial, None]:
@@ -26,7 +26,6 @@ class ttyUSBDeviceScanner(object):
             print(f"\n-- testing: {usbPort.device} --")
             # -- return first found --
             if self.__test_usb_device__(usbPort, lst):
-               print(f"\tfound: {usbPort}")
                return usbPort
          # -- not found --
          return None
@@ -54,7 +53,7 @@ class ttyUSBDeviceScanner(object):
          val = inst.read_register(regID)
          print(f" :: ResponseOK!")
          boolVal = int(inst.address) == int(val)
-      except Exception as e:
+      except:
          print(f" :: NoResponse!")
       finally:
          return boolVal
