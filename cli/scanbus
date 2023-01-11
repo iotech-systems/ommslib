@@ -33,7 +33,7 @@ inst.debug = False
 
 
 def main():
-   print("\n starting scan for ports: %s to %s\n" % tuple(adrange))
+   print("\n starting scan for serial_ports: %s to %s\n" % tuple(adrange))
    counter: int = 0
    start, end = [int(x) for x in adrange]
    # - - - -

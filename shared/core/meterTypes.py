@@ -3,10 +3,9 @@ import enum
 
 
 class meterType(enum.Enum):
-
-   e1phase = 2
-   e3phase = 4
-   coldWater = 8
-   hotWater = 16
+   e_1phase = 2
+   e_3phase = 4
+   cld_water = 8
+   hot_water = 16
    gas = 32
    heat = 64

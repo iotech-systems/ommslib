@@ -17,7 +17,7 @@ class ttyUSBDeviceScanner(object):
       self.ttyDev = ttyDev
       self.meters: t.List[et.Element] = []
       self.usbSerPorts: [] = None
-      # -- get all systems ser ports --
+      # -- get all systems ser serial_ports --
       self.__load_usb_ser_ports__()
 
    def locateMetersUSBSerialPort(self, lst: t.List[et.Element]) -> [serial.Serial, None]:
@@ -67,7 +67,7 @@ class ttyUSBDeviceScanner(object):
          if self.__do_ping__(inst, reg):
             pongCount += 1
          inst = None
-      # -- check number of pongs vs. number of pings/meters --
+      # -- check number of pongs vs. number of pings/edge_meters --
       if pongCount == 0:
          return False
       return (pongCount / meterCount) > 0.33

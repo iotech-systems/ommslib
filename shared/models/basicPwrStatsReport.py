@@ -1,6 +1,6 @@
 
 """
-CREATE TABLE streams.basic_pwr_stats (
+CREATE TABLE reg_streams.basic_pwr_stats (
    fk_meter_dbid int4 NOT NULL,
    reading_dts_utc timestamp NOT NULL,
    grid_freq_hz numeric(4, 2) NULL,
