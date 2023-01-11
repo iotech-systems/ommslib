@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<regtypes>
+   <!--
+      voltage regs:
+         l0_v ->  e1_phase
+         l1_v, l2_v, l3_v  -> e_3phase
+   -->
+   <regtype id="l0_v" unit="V" label="volts" />
+   <regtype id="l1_v" unit="V" label="volts" />
+   <regtype id="l2_v" unit="V" label="volts" />
+   <regtype id="l3_v" unit="V" label="volts" />
+   <!--
+      amp regs:
+         total_a: total_a for l1, l2, l3 or l0 if e_1phase
+   -->
+   <regtype id="total_a" unit="A" label="amp(s)" />
+   <regtype id="l1_a" unit="A" label="amp(s)" />
+   <regtype id="l2_a" unit="A" label="amp(s)" />
+   <regtype id="l3_a" unit="A" label="amp(s)" />
+   <!--
+      frequency regs:
+         l0_hz -> e_1phase
+   -->
+   <regtype id="l0_hz" unit="Hz" label="hertz" />
+   <regtype id="l1_hz" unit="Hz" label="hertz" />
+   <regtype id="l2_hz" unit="Hz" label="hertz" />
+   <regtype id="l3_hz" unit="Hz" label="hertz" />
+   <!-- active power or real power
+      Active power is the power which is actually consumed or utilized in an AC Circuit is
+      called True power or Active Power or real power. It is measured in kilowatt (kW) or MW.
+      It is the actual outcomes of the electrical system which runs the electric circuits or load.
+   -->
+   <regtype id="total_w" unit="W" label="Kilo|Watt|s" />
+   <regtype id="l1_w" unit="W" label="Kilo|Watt|s" />
+   <regtype id="l2_w" unit="W" label="Kilo|Watt|s" />
+   <regtype id="l3_w" unit="W" label="Kilo|Watt|s" />
+   <!-- APPARENT POWER (KVA): Kilo Volt Ampere is the measure of apparent power in ac circuit.
+      It used to rate how much power the supply can deliver. KVA is usually used to rate sources
+      such as transformers, generators, UPS etc. It is also called imaginary power. The actual power(KW)
+      consumed by the loads connected in a circuit can be obtained by multiplying apparent
+      power(KVA) with power factor. It can be expressed in complex form as:
+      apparent power(KVA) = active power(KW) + reactive power
+   -->
+   <regtype id="total_kva" unit="K|VA" label="Kilo|VoltAmpere" />
+   <regtype id="l1_kva" unit="K|VA" label="Kilo|VoltAmpere" />
+   <regtype id="l2_kva" unit="K|VA" label="Kilo|VoltAmpere" />
+   <regtype id="l3_kva" unit="K|VA" label="Kilo|VoltAmpere" />
+    <!-- REACTIVE POWER(KVAr): Reactive power is the imaginary part of apparent power when it is
+        expressed in complex form. If the load in an ac circuit is only resistive the power will always
+        flow from source to load. If reactive loads (inductor or capacitor) connected in ac circuit it causes
+        reactive power to develop in the circuit. The reactive power is continually bounces back and forth
+        between the source & load. It represents the energy that is first stored and then released in the magnetic
+        field of the inductor, or in the electric field of a capacitor connected in the circuit. Since
+        reactive power bounces back and forth between source and load it does not provide any energy to
+        the load and draws more current from mains so more heat loss take place on the circuit lines. The
+        reactive power can be reduced by increasing the power factor (reducing the phase angle). This can be
+        achieved by providing a designed capacitive bank in the circuit.
+    -->
+   <regtype id="total_kvar" unit="KVAr" label="KVAReactive" />
+   <regtype id="l1_kvar" unit="KVAr" label="KVAReactive" />
+   <regtype id="l2_kvar" unit="KVAr" label="KVAReactive" />
+   <regtype id="l3_kvar" unit="KVAr" label="KVAReactive" />
+   <!--
+      meter power factor of the meter
+      Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the
+      lower the percentage, the less efficient power usage is. Power factor (PF) is the ratio of
+      working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA).
+      Apparent power, also known as demand, is the measure of the amount of power used to run machinery
+      and equipment during a certain period. It is found by multiplying (kVA = V x A).
+      The result is expressed as kVA units.
+   -->
+   <regtype id="total_pf" unit="unitless" label="TotalPowerFactor" />
+   <regtype id="l1_pf" unit="unitless" label="L1_PowerFactor" />
+   <regtype id="l2_pf" unit="unitless" label="L2_PowerFactor" />
+   <regtype id="l3_pf" unit="unitless" label="L3_PowerFactor" />
+
+   <!--
+   # misc
+   CRC = "CRC"
+   CombinedCode = "CombinedCode"
+   # kwh ~ kWh
+   TotalActiveEnergy = "TotalActiveEnergy"                  # used by 1phase and 3phase edge_meters
+   L1_TotalActiveEnergy = "L1_TotalActiveEnergy"
+   L2_TotalActiveEnergy = "L2_TotalActiveEnergy"
+   L3_TotalActiveEnergy = "L3_TotalActiveEnergy"
+
+
+    # - - - -
+   TotalReactiveEnergy = "TotalReactiveEnergy"              # used by 1phase and 3phase edge_meters
+   L1_ReactiveEnergy = "L1_ReactiveEnergy"
+   L2_ReactiveEnergy = "L2_ReactiveEnergy"
+   L3_ReactiveEnergy = "L3_ReactiveEnergy"
+   # forward active energy
+   ForwardActiveEnergy = "ForwardActiveEnergy"
+   L1_ForwardActiveEnergy = "L1_ForwardActiveEnergy"
+   L2_ForwardActiveEnergy = "L2_ForwardActiveEnergy"
+   L3_ForwardActiveEnergy = "L3_ForwardActiveEnergy"
+
+   -->
+
+   <!-- misc
+      HardwareVersion = "HardwareVersion"
+      SoftwareVersion = "SoftwareVersion"
+      CT_Rate = "CT_Rate"
+      S0_OutputRate = "S0_OutputRate"
+      A3 = "A3"
+      CycleTime = "CycleTime"
+   -->
+
+</regtypes>
