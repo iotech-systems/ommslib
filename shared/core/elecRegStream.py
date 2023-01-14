@@ -33,6 +33,10 @@ class elecRegStream(object):
    def is_time_to_run(self):
       return (int(time.time()) - self.last_run_time) > self.run_intv
 
+   def time_to_run(self) -> int:
+      diff = int(time.time()) - self.last_run_time
+      return self.run_intv - diff
+
    def update_last_run(self):
       self.last_run_time = int(time.time())
 
