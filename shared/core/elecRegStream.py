@@ -17,7 +17,7 @@ class elecRegStream(object):
       # -- -- -- -- -- -- -- --
       self.run_intv: int = 0
       tmp = self.rs_xml.attrib["runInterval"].lower()
-      if "m" in tmp:
+      if "m" in tmp.lower():
          self.run_intv = (int(tmp.replace("m", "")) * 60)
       else:
          self.run_intv = int(tmp)
