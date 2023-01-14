@@ -34,6 +34,9 @@ class elecRegStream(object):
       return (int(time.time()) - self.last_run_time) > self.run_intv
 
    def time_to_run(self) -> int:
+      """
+         :returns time left before running next time
+      """
       diff = int(time.time()) - self.last_run_time
       return self.run_intv - diff
 
