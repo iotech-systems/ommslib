@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <regtypes>
    <!--
-      voltage regs:
+      voltage global_register_table:
          l0_v ->  e1_phase
          l1_v, l2_v, l3_v  -> e_3phase
    -->
@@ -10,7 +10,7 @@
    <regtype id="l2_v" unit="V" label="volts" />
    <regtype id="l3_v" unit="V" label="volts" />
    <!--
-      amp regs:
+      amp global_register_table:
          total_a: total_a for l1, l2, l3 or l0 if e_1phase
    -->
    <regtype id="total_a" unit="A" label="amp(s)" />
@@ -18,7 +18,7 @@
    <regtype id="l2_a" unit="A" label="amp(s)" />
    <regtype id="l3_a" unit="A" label="amp(s)" />
    <!--
-      frequency regs:
+      frequency global_register_table:
          l0_hz -> e_1phase
    -->
    <regtype id="l0_hz" unit="Hz" label="hertz" />
