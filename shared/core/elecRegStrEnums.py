@@ -110,3 +110,6 @@ class elecRegStrEnumsShort(Enum):
    """
       this list needs to be expended as needed
    """
+   tl_var = "tl_var"
+   tl_va = "tl_va"
+   tl_kvarh = "tl_kvarh"
