@@ -113,3 +113,8 @@ class elecRegStrEnumsShort(Enum):
    tl_var = "tl_var"
    tl_va = "tl_va"
    tl_kvarh = "tl_kvarh"
+   """
+      used my mqtt zamel
+   """
+   mqtt_uptime = "mqtt_uptime"
+   mqtt_connected = "mqtt_connected"
