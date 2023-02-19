@@ -19,14 +19,13 @@ class mqttMeterInfo(object):
 
 
 class redisDBIdx(enum.Enum):
-
    DB_IDX_ONPREM_DIAG = 0
    DB_IDX_EDGE_DIAG = 1
    DB_IDX_READS = 2
+   DB_IDX_RUNTIME = 3
    DB_IDX_HEARTBEATS = 4
 
 
 class readStatus(object):
-
    READ_OK: str = "READ_OK"
    READ_FAILED: str = "READ_FAILED"
