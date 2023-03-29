@@ -25,6 +25,7 @@ class redisDBIdx(enum.Enum):
    DB_IDX_RUNTIME = 3
    DB_IDX_HEARTBEATS = 4
    DB_IDX_GPIO = 8
+   DB_IDX_FLASK = 10
 
 
 class readStatus(object):
