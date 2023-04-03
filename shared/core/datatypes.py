@@ -18,6 +18,9 @@ class mqttMeterInfo(object):
       self.syspath = syspath
 
 
+# -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+#  redis enums
+# -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 class redisDBIdx(enum.Enum):
    DB_IDX_ONPREM_DIAG = 0
    DB_IDX_EDGE_DIAG = 1
